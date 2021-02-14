@@ -11,6 +11,5 @@ namespace ProductCategoriesMVC.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "The description field is required")]
         public string Description { get; set; }
-        public List<Product> Products { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProductCategoriesMVC.Models;
 
 namespace ProductCategoriesAPI
 {
@@ -27,6 +28,7 @@ namespace ProductCategoriesAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<Context>();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductCategories API", Version = "v1" }); });
         }
 
