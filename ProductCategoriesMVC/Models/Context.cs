@@ -15,5 +15,10 @@ namespace ProductCategoriesMVC.Models
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Prod_Cat;Integrated Security=True");
         }
+
+        public virtual void SetModified(object entity)
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
     }
 }
